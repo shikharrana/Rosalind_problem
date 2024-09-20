@@ -1,2 +1,2 @@
 # Rosalind_problem
-these are code for rosalind problems i solved usuing python .
+These are code for Rosalind problems i solved using Python .

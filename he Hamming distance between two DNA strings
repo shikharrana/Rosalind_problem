@@ -1,0 +1,14 @@
+def hamming_distance(s, t):
+    # Ensure both strings are of equal length
+    if len(s) != len(t):
+        raise ValueError("Strings must be of equal length.")
+    
+    # Calculate the Hamming distance
+    distance = sum(1 for i in range(len(s)) if s[i] != t[i])
+    return distance
+
+# Sample dataset
+s = "GAGCCTACTAACGGGAT"
+t = "CATCGTAATGACGGCCT"
+result = hamming_distance(s, t)
+print(result)  # This should print the Hamming distance for the given strings

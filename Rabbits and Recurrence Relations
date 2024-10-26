@@ -1,0 +1,22 @@
+def rabbit_pairs(n, k):
+    # Base cases
+    if n == 1 or n == 2:
+        return 1
+    
+    # Initialize the first two months
+    prev2 = 1  # F_1
+    prev1 = 1  # F_2
+    
+    # Calculate the number of rabbit pairs for month n using the recurrence relation
+    for i in range(3, n + 1):
+        current = prev1 + k * prev2
+        prev2 = prev1
+        prev1 = current
+    
+    return prev1
+
+# Given dataset
+n = 33
+k = 3
+result = rabbit_pairs(n, k)
+print(result)
